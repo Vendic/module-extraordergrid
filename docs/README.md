@@ -7,15 +7,18 @@ For use cases like:
 - Pay by invoice
 
 With this module, it's very easy to setup. Just set the setup like this:
+
 ![Configuration screenshot](/docs/media/configuration.png)
 
 Clear your Magento 2 cache, and your new filtered order grid is ready to go:
 
 ### Screenshots
 Menu:
+
 ![Menu screenshot](/docs/media/menu.png)
 
 Filtered order grid:
+
 ![Filtered order grid screenshot](/docs/media/grid.png)
 
 ### Installation
