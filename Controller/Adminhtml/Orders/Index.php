@@ -42,9 +42,17 @@ class Index extends Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $configuredTitle = $this->settings->getGridName();
-        $resultPage->getConfig()->getTitle()->prepend($configuredTitle);
+        $resultPage->getConfig()->getTitle()->prepend($this->getTitle());
 
         return $resultPage;
+    }
+
+    protected function getTitle(): string
+    {
+        $title = $this->settings->getGridName();
+        if (!$title) {
+            return __('Filtered order grid');
+        }
+        return $title;
     }
 }

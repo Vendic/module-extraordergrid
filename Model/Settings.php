@@ -26,14 +26,25 @@ class Settings
         $this->scopeConfig = $scopeConfig;
     }
 
-    public function getGridName(): string
+    /**
+     * @return mixed|null
+     */
+    public function getGridName()
     {
         return $this->scopeConfig->getValue(self::XML_PATH_GRID_NAME);
     }
 
+    /**
+     * @return array
+     */
     public function getAllowedStatuses(): array
     {
         $allowedStatuses = $this->scopeConfig->getValue(self::XML_PATH_ALLOWED_STATUSES);
+
+        if (!$allowedStatuses) {
+            return [];
+        }
+
         return explode(',', $allowedStatuses);
     }
 }

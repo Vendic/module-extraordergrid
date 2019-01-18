@@ -25,8 +25,9 @@ class ItemPlugin
     {
         $id = $subject->getId();
         if ($id === 'Vendic_ExtraOrderGrid::sales_order_by_invoice') {
-            $gridTitle = $this->settings->getGridName();
-            $subject->setTitle($gridTitle);
+            if ($gridTitle = $this->settings->getGridName()) {
+                $subject->setTitle($gridTitle);
+            }
         }
     }
 }
