@@ -2,7 +2,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Vendic_ExtraOrderGrid::sales_order_by_invoice" title="Filtered orders" translate="title" module="Vendic_ExtraOrderGrid" sortOrder="11"
-             parent="Magento_Sales::sales_operation" action="vendic_extraordergrid/orders" resource="Vendic_ExtraOrderGrid::orders"/>
+        <add id="Vendic_ExtraOrderGrid::sales_order_by_invoice"
+             title="Filtered orders"
+             translate="title"
+             module="Vendic_ExtraOrderGrid"
+             sortOrder="11"
+             parent="Magento_Sales::sales_operation"
+             action="vendic_extraordergrid/orders"
+             resource="Vendic_ExtraOrderGrid::orders_resource"/>
     </menu>
 </config>

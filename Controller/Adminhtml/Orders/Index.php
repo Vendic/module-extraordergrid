@@ -55,4 +55,9 @@ class Index extends Action
         }
         return $title;
     }
+
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Vendic_ExtraOrderGrid::orders_resource');
+    }
 }

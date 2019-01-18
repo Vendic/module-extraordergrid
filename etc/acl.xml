@@ -4,10 +4,22 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Magento_Sales::sales" title="Sales" translate="title" sortOrder="20">
-                    <resource id="Magento_Sales::sales_operation" title="Operations" translate="title" sortOrder="10">
-                        <resource id="Vendic_ExtraOrderGrid::orders" title="Extra Order Grid" translate="title"
-                                  sortOrder="11"/>
+                <resource id="Magento_Sales::sales">
+                    <resource id="Magento_Sales::sales_operation">
+                        <resource id="Vendic_ExtraOrderGrid::orders_resource"
+                                  title="Extra Order Grid"
+                                  translate="title"
+                                  sortOrder="11"
+                        />
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Vendic_ExtraOrderGrid::configuration"
+                                      title="Extra order grid configuration"
+                            />
+                        </resource>
                     </resource>
                 </resource>
             </resource>
