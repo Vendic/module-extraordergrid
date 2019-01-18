@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendic" translate="label" sortOrder="20">
+            <label>Vendic</label>
+        </tab>
+        <section id="vendic_extraordergrid"
+                 translate="label"
+                 type="text"
+                 sortOrder="1"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Extra order grid</label>
+            <tab>vendic</tab>
+            <resource>Vendic_ExtraOrderGrid::configuration</resource>
+            <group id="general"
+                   translate="label"
+                   type="text"
+                   sortOrder="1"
+                   showInDefault="1"
+                   showInWebsite="0"
+                   showInStore="0">
+                <label>General</label>
+                <field id="grid_name"
+                       translate="label"
+                       type="text"
+                       sortOrder="1"
+                       showInDefault="1"
+                       showInWebsite="0"
+                       showInStore="0">
+                    <label>Name of the grid</label>
+                    <comment>For example 'backorders' or 'pre-orders'</comment>
+                </field>
+                <field id="allowed_order_statuses"
+                       translate="label"
+                       type="multiselect"
+                       sortOrder="2"
+                       showInDefault="1"
+                       showInWebsite="0"
+                       showInStore="0">
+                    <label>Allowed order statuses</label>
+                    <source_model>Vendic\ExtraOrderGrid\Model\Config\Source\OrderStatuses</source_model>
+                    <comment>These are the order statuses that you want to show on the extra order grid</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

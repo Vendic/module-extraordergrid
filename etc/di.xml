@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Admin grid -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="vendic_extraordergrid_order_grid_data" xsi:type="string">
+                    Vendic\ExtraOrderGrid\Model\ResourceModel\Order\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Plugins -->
+    <type name="Magento\Backend\Model\Menu\Item">
+        <plugin sortOrder="1" name="vendicExtraOrderGridItem"
+                type="Vendic\ExtraOrderGrid\Plugin\Model\Menu\ItemPlugin"/>
+        <plugin sortOrder="1" name="vendicExtraOrderGridItem"
+                type="Vendic\ExtraOrderGrid\Plugin\Model\Menu\ItemPlugin"/>
+    </type>
+</config>
