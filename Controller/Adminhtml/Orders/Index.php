@@ -46,8 +46,10 @@ class Index extends Action
 
         return $resultPage;
     }
-
-    protected function getTitle(): string
+    /**
+     * @return string
+     */
+    protected function getTitle()
     {
         $title = $this->settings->getGridName();
         if (!$title) {
@@ -56,6 +58,9 @@ class Index extends Action
         return $title;
     }
 
+    /**
+     * @return bool
+     */
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('Vendic_ExtraOrderGrid::orders_resource');
