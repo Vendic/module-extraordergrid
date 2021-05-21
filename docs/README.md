@@ -33,4 +33,5 @@ This module uses a copied version of the default `order_admin_grid` UIComponent.
 To add/remove columns, just create your own Magento 2 module and extend the UI Component.
 
 ### About Vendic
-[Vendic](https://www.vendic.nl "Vendic Homepage") develops technically challenging e-commerce websites using Magento 2, as well as innovative headless PWA shops. Feel free to check out our projects on our website.
+[Vendic - Magento 2](https://vendic.nl "Vendic Homepage") develops technically challenging e-commerce websites using Magento 2. Feel free to check out our projects on our website.
+
